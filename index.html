@@ -426,7 +426,15 @@ return;
 alert("Ordine inviato con successo!");
 
 }
+function toggleCart(){
+let cart=document.getElementById("cart-box");
 
+if(cart.style.display=="block"){
+cart.style.display="none";
+}else{
+cart.style.display="block";
+}
+}
 </script>
 </body>
 </html>
