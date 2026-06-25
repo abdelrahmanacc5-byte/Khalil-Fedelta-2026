@@ -45,7 +45,16 @@ text-decoration:none;
 margin:0 15px;
 transition:.3s;
 }
+<div id="cart-icon" onclick="toggleCart()">
+🛒 <span id="cart-count">0</span>
+</div>
 
+<div id="cart-box">
+    <h3>Carrello</h3>
+    <ul id="lista-carrello"></ul>
+    <p><b>Totale: <span id="totale">€0.00</span></b></p>
+    <button class="buy-btn">Pagamento</button>
+</div>
 nav a:hover{
 color:#22c55e;
 }
@@ -199,7 +208,32 @@ border-radius:50px;
 text-decoration:none;
 font-weight:bold;
 }
+#cart-icon{
+position:fixed;
+top:20px;
+right:20px;
+background:#3cff5c;
+color:#000;
+padding:12px 18px;
+border-radius:50px;
+cursor:pointer;
+font-weight:bold;
+z-index:9999;
+}
 
+#cart-box{
+position:fixed;
+top:80px;
+right:20px;
+width:300px;
+background:#fff;
+color:#000;
+padding:20px;
+border-radius:15px;
+display:none;
+box-shadow:0 0 20px rgba(0,0,0,.3);
+z-index:9999;
+}
 </style>
 </head>
 
@@ -293,13 +327,6 @@ Aggiungi al Carrello
 onclick="alert('Prodotto aggiunto al carrello!')">
 Aggiungi al Carrello
 </button>
-</div>
-<div id="cart" style="margin-top:30px;background:#111;padding:20px;border-radius:15px;">
-    <h3>🛒 Carrello</h3>
-    <p>Totale: €0</p>
-    <button class="buy-btn">
-        Procedi al Pagamento
-    </button>
 </div>
 </div>
 
