@@ -271,7 +271,13 @@ Prenota Servizio
 <p class="price">€899</p>
 <button class="buy-btn">Aggiungi al Carrello</button>
 </div>
-
+<div id="cart" style="margin-top:30px;background:#111;padding:20px;border-radius:15px;">
+    <h3>🛒 Carrello</h3>
+    <p>Totale: €0</p>
+    <button class="buy-btn">
+        Procedi al Pagamento
+    </button>
+</div>
 </div>
 
 </section>
@@ -342,6 +348,35 @@ Prenota Ora
 <a class="whatsapp" href="https://wa.me/393934020090">
 WhatsApp
 </a>
+<script>
 
+let cart = [];
+
+function addToCart(name,price){
+
+cart.push({
+name:name,
+price:price
+});
+
+document.getElementById("cart-count").innerHTML = cart.length;
+
+}
+
+function checkout(){
+
+if(cart.length==0){
+
+alert("Il carrello è vuoto");
+
+return;
+
+}
+
+alert("Ordine inviato con successo!");
+
+}
+
+</script>
 </body>
 </html>
