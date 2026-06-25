@@ -182,7 +182,7 @@ border-radius:10px;
 cursor:pointer;
 }
 
-footer{
+<footer id="contatti">{
 padding:40px;
 text-align:center;
 background:#111827;
@@ -211,8 +211,8 @@ font-weight:bold;
 
 <nav>
 <a href="#">Home</a>
-<a href="#">Prodotti</a>
-<a href="#">Servizi</a>
+<a href="#prodotti">Prodotti</a>
+<a href="#servizi">Servizi</a>
 <a href="#">Riparazioni</a>
 <a href="#">Contatti</a>
 </nav>
@@ -229,9 +229,15 @@ font-weight:bold;
 Prodotti professionali, riparazioni di macchine e servizi di pulizia per case e aziende.
 </p>
 
-<a href="#prodotti" class="btn">Acquista Ora</a>
+<a href="#prodotti" class="btn"
+onclick="alert('Benvenuto nel catalogo prodotti!')">
+Acquista Ora
+</a>
 
-<a href="#prenota" class="btn">Prenota Servizio</a>
+<a href="#prenota" class="btn"
+onclick="alert('Compila il modulo per prenotare il servizio')">
+Prenota Servizio
+</a>
 
 </div>
 
@@ -307,15 +313,19 @@ Prodotti professionali, riparazioni di macchine e servizi di pulizia per case e 
 
 <input type="date">
 
+<script>
+
 <button onclick="prenota()">
 Prenota Ora
 </button>
+
+</script>
 
 </div>
 
 </section>
 
-<footer>
+<footer id="contatti">
 
 <h2>Khalil Fedeltà</h2>
 
@@ -327,7 +337,7 @@ Prenota Ora
 
 </footer>
 
-<a class="whatsapp" href="https://wa.me/3934020090">
+<a class="whatsapp" href="https://wa.me/393934020090">
 WhatsApp
 </a>
 
