@@ -3,12 +3,331 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Khalil Fedelta</title>
+
+<title>Khalil Fedeltà</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#0f1115;
+color:white;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:#111827;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo{
+font-size:28px;
+font-weight:800;
+color:#22c55e;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:0 15px;
+transition:.3s;
+}
+
+nav a:hover{
+color:#22c55e;
+}
+
+.hero{
+min-height:90vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:40px;
+background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1600');
+background-size:cover;
+background-position:center;
+}
+
+.hero-content h1{
+font-size:60px;
+margin-bottom:20px;
+}
+
+.hero-content p{
+font-size:20px;
+max-width:800px;
+margin:auto;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 30px;
+background:#22c55e;
+color:white;
+text-decoration:none;
+border-radius:12px;
+margin:10px;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-5px);
+}
+
+.section{
+padding:90px 8%;
+}
+
+.section-title{
+text-align:center;
+font-size:40px;
+margin-bottom:50px;
+}
+
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:#1a1f2b;
+padding:20px;
+border-radius:20px;
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:15px;
+}
+
+.card h3{
+margin:15px 0;
+}
+
+.price{
+color:#22c55e;
+font-size:22px;
+font-weight:700;
+}
+
+.buy-btn{
+width:100%;
+margin-top:15px;
+padding:12px;
+border:none;
+background:#22c55e;
+color:white;
+border-radius:10px;
+cursor:pointer;
+}
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.service{
+background:#1a1f2b;
+padding:30px;
+border-radius:20px;
+text-align:center;
+}
+
+.booking{
+max-width:700px;
+margin:auto;
+}
+
+.booking input{
+width:100%;
+padding:15px;
+margin:10px 0;
+border:none;
+border-radius:10px;
+}
+
+.booking button{
+width:100%;
+padding:15px;
+background:#22c55e;
+border:none;
+color:white;
+font-size:18px;
+border-radius:10px;
+cursor:pointer;
+}
+
+footer{
+padding:40px;
+text-align:center;
+background:#111827;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+}
+
+</style>
 </head>
+
 <body>
 
-<h1>Khalil Fedelta</h1>
+<header>
 
-<p>Benvenuti nel nostro sito.</p>
+<div class="logo">Khalil Fedeltà</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Prodotti</a>
+<a href="#">Servizi</a>
+<a href="#">Riparazioni</a>
+<a href="#">Contatti</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Soluzioni Professionali per la Pulizia</h1>
+
+<p>
+Prodotti professionali, riparazioni di macchine e servizi di pulizia per case e aziende.
+</p>
+
+<a href="#prodotti" class="btn">Acquista Ora</a>
+
+<a href="#prenota" class="btn">Prenota Servizio</a>
+
+</div>
+
+</section>
+
+<section class="section" id="prodotti">
+
+<h2 class="section-title">Prodotti Popolari</h2>
+
+<div class="products">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1585421514738-01798e348b17?w=800">
+<h3>Detergente Multiuso</h3>
+<p class="price">€5.99</p>
+<button class="buy-btn">Aggiungi al Carrello</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1603712725038-e9334ae8f39f?w=800">
+<h3>Mop Professionale</h3>
+<p class="price">€19.99</p>
+<button class="buy-btn">Aggiungi al Carrello</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1590012314607-cda9d9b699ae?w=800">
+<h3>Lavasciuga Pavimenti</h3>
+<p class="price">€899</p>
+<button class="buy-btn">Aggiungi al Carrello</button>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="section-title">I Nostri Servizi</h2>
+
+<div class="services">
+
+<div class="service">
+<h3>🏠 Pulizia Casa</h3>
+<p>Pulizia completa di appartamenti e ville.</p>
+</div>
+
+<div class="service">
+<h3>🏢 Pulizia Uffici</h3>
+<p>Servizi professionali per aziende.</p>
+</div>
+
+<div class="service">
+<h3>🛠 Riparazione Macchine</h3>
+<p>Assistenza tecnica specializzata.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="prenota">
+
+<h2 class="section-title">Prenota una Pulizia</h2>
+
+<div class="booking">
+
+<input type="text" placeholder="Nome">
+
+<input type="text" placeholder="Telefono">
+
+<input type="text" placeholder="Indirizzo">
+
+<input type="date">
+
+<button>Prenota Ora</button>
+
+</div>
+
+</section>
+
+<footer>
+
+<h2>Khalil Fedeltà</h2>
+
+<p>Via Giuseppe Garibaldi 41, 20010 Pogliano Milanese MI</p>
+
+<p>+39 340 200 90 90</p>
+
+<p>kfprodotti@gmail.com</p>
+
+</footer>
+
+<a class="whatsapp" href="https://wa.me/3934020090">
+WhatsApp
+</a>
 
 </body>
+</html>
