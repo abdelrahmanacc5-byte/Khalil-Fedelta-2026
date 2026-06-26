@@ -21,3 +21,49 @@ img{
 max-width:100%;
 display:block;
 }
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:20px 7%;
+background:#111827;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000;
+box-shadow:0 5px 20px rgba(0,0,0,.3);
+}
+
+.logo{
+font-size:30px;
+font-weight:700;
+color:#22c55e;
+}
+
+nav{
+display:flex;
+gap:30px;
+}
+
+nav a{
+font-size:17px;
+transition:.3s;
+}
+
+nav a:hover{
+color:#22c55e;
+}
+
+.cart-icon{
+background:#22c55e;
+padding:10px 18px;
+border-radius:10px;
+font-weight:bold;
+cursor:pointer;
+transition:.3s;
+}
+
+.cart-icon:hover{
+background:#16a34a;
+}
