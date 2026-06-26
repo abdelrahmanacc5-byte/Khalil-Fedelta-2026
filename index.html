@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Khalil Fedeltà</title>
-<link rel="icon" href="https://lh3.googleusercontent.com/sitesv/AA5AbUB1gQJVaH9EmSz5RG9oOwllEtQb4vOtDlb-stfevMLK0dvFfg8zY9EKShIax1JDuSKLsWXu1-6nYOmrsEwpqx9eLP8CxQ0zQmCBBs8oDRQgDcTAPemJp4jqfE060mGci_NVdwv84286yovUYhNVYPdA_cKdZilFxXnxVEdNuNaRe4ni9hof_t88xc69=w16383" type="image/png" sizes="48x48">
+<title>Khalil Fedeltà | Prodotti e Servizi di Pulizia</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
 <style>
 
@@ -14,370 +21,955 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
+scroll-behavior:smooth;
 font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#0f1115;
+background:#0f1117;
 color:white;
+overflow-x:hidden;
+}
+
+img{
+max-width:100%;
+display:block;
+}
+
+a{
+text-decoration:none;
+color:inherit;
 }
 
 header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 8%;
-background:#111827;
-position:sticky;
+
+position:fixed;
+
 top:0;
+
+left:0;
+
+width:100%;
+
+padding:18px 7%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+background:rgba(15,17,23,.85);
+
+backdrop-filter:blur(12px);
+
 z-index:1000;
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
 }
 
 .logo{
-font-size:28px;
+
+font-size:30px;
+
 font-weight:800;
-color:#22c55e;
+
+color:#31d46c;
+
+}
+
+.logo span{
+
+color:white;
+
+}
+
+nav{
+
+display:flex;
+
+gap:35px;
+
 }
 
 nav a{
-color:white;
-text-decoration:none;
-margin:0 15px;
-transition:.3s;
-}
-<div id="cart-icon" onclick="toggleCart()">
-🛒 <span id="cart-count">0</span>
-</div>
 
-<div id="cart-box">
-    <h3>Carrello</h3>
-    <ul id="lista-carrello"></ul>
-    <p><b>Totale: <span id="totale">€0.00</span></b></p>
-    <button class="buy-btn">Pagamento</button>
-</div>
+font-weight:600;
+
+transition:.3s;
+
+}
+
 nav a:hover{
-color:#22c55e;
+
+color:#31d46c;
+
+}
+
+.right-icons{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+}
+
+.icon-btn{
+
+width:45px;
+
+height:45px;
+
+border-radius:50%;
+
+border:none;
+
+cursor:pointer;
+
+background:#31d46c;
+
+font-size:18px;
+
+transition:.3s;
+
+}
+
+.icon-btn:hover{
+
+transform:scale(1.08);
+
+}
+
+#cart-count{
+
+position:absolute;
+
+margin-left:-8px;
+
+margin-top:-10px;
+
+background:red;
+
+color:white;
+
+width:22px;
+
+height:22px;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:12px;
+
+font-weight:bold;
+
+}
+
+.menu{
+
+display:none;
+
+font-size:28px;
+
+cursor:pointer;
+
 }
 
 .hero{
-min-height:90vh;
+
+min-height:100vh;
+
 display:flex;
+
 align-items:center;
+
 justify-content:center;
-text-align:center;
-padding:40px;
-background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
-url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1600');
+
+padding:120px 7% 60px;
+
+background:
+
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+
+url("https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1800");
+
 background-size:cover;
+
 background-position:center;
+
+text-align:center;
+
 }
 
-.hero-content h1{
-font-size:60px;
+.hero h1{
+
+font-size:65px;
+
+font-weight:800;
+
 margin-bottom:20px;
+
 }
 
-.hero-content p{
-font-size:20px;
-max-width:800px;
+.hero p{
+
+max-width:900px;
+
 margin:auto;
-margin-bottom:30px;
+
+font-size:20px;
+
+line-height:1.8;
+
+opacity:.9;
+
 }
 
 .btn{
+
 display:inline-block;
-padding:15px 30px;
-background:#22c55e;
+
+margin-top:35px;
+
+padding:16px 38px;
+
+border-radius:50px;
+
+background:#31d46c;
+
 color:white;
-text-decoration:none;
-border-radius:12px;
-margin:10px;
+
+font-weight:700;
+
 transition:.3s;
+
 }
 
 .btn:hover{
+
 transform:translateY(-5px);
+
+box-shadow:0 15px 30px rgba(49,212,108,.35);
+
 }
 
-.section{
-padding:90px 8%;
+section{
+
+padding:100px 7%;
+
 }
 
 .section-title{
+
+font-size:42px;
+
 text-align:center;
-font-size:40px;
-margin-bottom:50px;
+
+margin-bottom:60px;
+
+font-weight:800;
+
 }
 
 .products{
+
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
 }
 
 .card{
-background:#1a1f2b;
-padding:20px;
+
+background:#171b24;
+
 border-radius:20px;
-transition:.4s;
+
+overflow:hidden;
+
+transition:.35s;
+
 }
 
 .card:hover{
+
 transform:translateY(-10px);
+
 }
 
 .card img{
+
+height:240px;
+
 width:100%;
-height:220px;
+
 object-fit:cover;
-border-radius:15px;
+
 }
 
-.card h3{
-margin:15px 0;
+.card-content{
+
+padding:22px;
+
 }
 
 .price{
-color:#22c55e;
-font-size:22px;
+
+font-size:24px;
+
 font-weight:700;
+
+color:#31d46c;
+
+margin:15px 0;
+
+}
+
+.stock{
+
+margin-top:8px;
+
+font-size:14px;
+
+color:#c7c7c7;
+
 }
 
 .buy-btn{
+
 width:100%;
-margin-top:15px;
-padding:12px;
+
+padding:14px;
+
+margin-top:18px;
+
 border:none;
-background:#22c55e;
+
+border-radius:12px;
+
+background:#31d46c;
+
 color:white;
-border-radius:10px;
+
+font-size:17px;
+
+font-weight:700;
+
 cursor:pointer;
+
+transition:.3s;
+
 }
 
+.buy-btn:hover{
+
+transform:scale(1.03);
+
+}
 .services{
+
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
 }
 
 .service{
-background:#1a1f2b;
-padding:30px;
+
+background:#171b24;
+
+padding:35px;
+
 border-radius:20px;
+
 text-align:center;
+
+transition:.3s;
+
+}
+
+.service:hover{
+
+transform:translateY(-10px);
+
+}
+
+.service i{
+
+font-size:55px;
+
+color:#31d46c;
+
+margin-bottom:20px;
+
+}
+
+.service h3{
+
+margin-bottom:15px;
+
 }
 
 .booking{
-max-width:700px;
+
+max-width:750px;
+
 margin:auto;
+
+background:#171b24;
+
+padding:35px;
+
+border-radius:20px;
+
 }
 
-.booking input{
+.booking input,
+
+.booking textarea{
+
 width:100%;
-padding:15px;
-margin:10px 0;
+
+padding:16px;
+
+margin:12px 0;
+
 border:none;
-border-radius:10px;
+
+border-radius:12px;
+
+font-size:16px;
+
+outline:none;
+
 }
 
 .booking button{
+
 width:100%;
-padding:15px;
-background:#22c55e;
+
+padding:16px;
+
+background:#31d46c;
+
 border:none;
+
+border-radius:12px;
+
 color:white;
+
 font-size:18px;
-border-radius:10px;
+
+font-weight:700;
+
 cursor:pointer;
+
+transition:.3s;
+
 }
 
-<footer id="contatti">{
-padding:40px;
+.booking button:hover{
+
+transform:scale(1.03);
+
+}
+
+footer{
+
+background:#11151d;
+
+padding:60px 7%;
+
 text-align:center;
-background:#111827;
+
+}
+
+footer h2{
+
+color:#31d46c;
+
+margin-bottom:20px;
+
 }
 
 .whatsapp{
+
 position:fixed;
-bottom:20px;
-right:20px;
+
+bottom:25px;
+
+right:25px;
+
+width:65px;
+
+height:65px;
+
+border-radius:50%;
+
 background:#25D366;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:30px;
+
 color:white;
-padding:15px 20px;
-border-radius:50px;
-text-decoration:none;
-font-weight:bold;
-}
-#cart-icon{
-position:fixed;
-top:20px;
-right:20px;
-background:#3cff5c;
-color:#000;
-padding:12px 18px;
-border-radius:50px;
-cursor:pointer;
-font-weight:bold;
-z-index:9999;
+
+box-shadow:0 0 25px rgba(37,211,102,.5);
+
+z-index:999;
+
 }
 
-#cart-box{
+#cart{
+
 position:fixed;
-top:80px;
-right:20px;
-width:300px;
-background:#fff;
-color:#000;
-padding:20px;
-border-radius:15px;
-display:none;
-box-shadow:0 0 20px rgba(0,0,0,.3);
+
+top:0;
+
+right:-420px;
+
+width:380px;
+
+height:100vh;
+
+background:white;
+
+color:#111;
+
+padding:25px;
+
+transition:.4s;
+
+overflow:auto;
+
 z-index:9999;
+
 }
+
+#cart.active{
+
+right:0;
+
+}
+
+#cart h2{
+
+margin-bottom:20px;
+
+}
+
+.cart-item{
+
+display:flex;
+
+justify-content:space-between;
+
+margin-bottom:15px;
+
+padding-bottom:15px;
+
+border-bottom:1px solid #ddd;
+
+}
+
+.checkout{
+
+width:100%;
+
+padding:15px;
+
+background:#31d46c;
+
+color:white;
+
+border:none;
+
+border-radius:12px;
+
+font-size:18px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+margin-top:20px;
+
+}
+
+@media(max-width:900px){
+
+nav{
+
+display:none;
+
+}
+
+.menu{
+
+display:block;
+
+}
+
+.hero h1{
+
+font-size:42px;
+
+}
+
+.hero p{
+
+font-size:17px;
+
+}
+
+.section-title{
+
+font-size:32px;
+
+}
+
+#cart{
+
+width:100%;
+
+}
+
+}
+
 </style>
+
 </head>
 
 <body>
-
 <header>
 
-<div class="logo">Khalil Fedeltà</div>
+<div class="logo">
+Khalil <span>Fedeltà</span>
+</div>
 
-<nav>
-<a href="#">Home</a>
+<nav id="menu">
+
+<a href="#home">Home</a>
+
 <a href="#prodotti">Prodotti</a>
+
 <a href="#servizi">Servizi</a>
-<a href="#">Riparazioni</a>
-<a href="#">Contatti</a>
+
+<a href="#prenota">Prenota</a>
+
+<a href="#contatti">Contatti</a>
+
 </nav>
+
+<div class="right-icons">
+
+<button class="icon-btn">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+</button>
+
+<button class="icon-btn" onclick="toggleCart()">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+<span id="cart-count">0</span>
+
+</button>
+
+<div class="menu">
+
+<i class="fa-solid fa-bars"></i>
+
+</div>
+
+</div>
 
 </header>
 
-<section class="hero">
-
-<div class="hero-content">
-
-<h1>Soluzioni Professionali per la Pulizia</h1>
-
-<p>
-Prodotti professionali, riparazioni di macchine e servizi di pulizia per case e aziende.
-</p>
-
-<a href="#prodotti" class="btn">
-Acquista Ora
-</a>
-
-<a href="#prenota" class="btn">
-Prenota Servizio
-</a>
-<a href="#prenota" class="btn"
-onclick="alert('Compila il modulo per prenotare il servizio')">
-Prenota Servizio
-</a>
-
-</div>
-
-</section>
-
-<section class="section" id="prodotti">
-
-<h2 class="section-title">Prodotti Popolari</h2>
-<div id="cart" style="background:#111;padding:20px;border-radius:15px;margin-bottom:30px;">
+<div id="cart">
 
 <h2>🛒 Carrello</h2>
 
-<ul id="lista-carrello"></ul>
+<div id="cart-items">
 
-<h3>Totale:
-<span id="totale">€0.00</span>
+<p>Nessun prodotto nel carrello.</p>
+
+</div>
+
+<h3 style="margin-top:20px;">
+
+Totale:
+<span id="total">
+€0.00
+</span>
+
 </h3>
 
-<button class="buy-btn"
-onclick="aggiungiCarrello('Mop Professionale',19.99)">
-Aggiungi al Carrello
-</button>
+<button class="checkout">
+
 Pagamento con Carta
+
 </button>
 
 </div>
-<div class="products">
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1585421514738-01798e348b17?w=800">
-<h3>Detergente Multiuso</h3>
-<p class="price">€5.99</p>
-<button class="buy-btn">Aggiungi al Carrello</button>
-</div>
+<section class="hero" id="home">
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1603712725038-e9334ae8f39f?w=800">
-<h3>Mop Professionale</h3>
-<p class="price">€19.99</p>
-<button class="buy-btn"
-onclick="alert('Prodotto aggiunto al carrello!')">
-Aggiungi al Carrello
-</button>
-</div>
+<div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1590012314607-cda9d9b699ae?w=800">
-<h3>Lavasciuga Pavimenti</h3>
-<p class="price">€899</p>
-<button class="buy-btn"
-onclick="alert('Prodotto aggiunto al carrello!')">
-Aggiungi al Carrello
-</button>
-</div>
+<h1>
+
+Prodotti Professionali<br>
+
+per la Pulizia
+
+</h1>
+
+<p>
+
+Vendita di detergenti professionali, macchine per la pulizia,
+riparazione di macchinari e servizi di pulizia per abitazioni,
+uffici e aziende.
+
+</p>
+
+<a href="#prodotti" class="btn">
+
+Scopri i Prodotti
+
+</a>
+
+<a href="#prenota" class="btn">
+
+Prenota un Servizio
+
+</a>
+
 </div>
 
 </section>
+<section id="prodotti">
 
-<section class="section">
+<h2 class="section-title">
 
-<h2 class="section-title">I Nostri Servizi</h2>
+I Nostri Prodotti
+
+</h2>
+
+<div class="products">
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1585421514738-01798e348b17?w=800">
+
+<div class="card-content">
+
+<h3>Detergente Professionale</h3>
+
+<p>Detergente universale per casa e ufficio.</p>
+
+<div class="price">€5.99</div>
+
+<div class="stock">
+
+Disponibili:
+<span id="stock1">50</span>
+
+</div>
+
+<button class="buy-btn"
+
+onclick="addToCart('Detergente Professionale',5.99,'stock1')">
+
+Aggiungi al Carrello
+
+</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1603712725038-e9334ae8f39f?w=800">
+
+<div class="card-content">
+
+<h3>Mop Professionale</h3>
+
+<p>Mop in microfibra per pavimenti.</p>
+
+<div class="price">€19.99</div>
+
+<div class="stock">
+
+Disponibili:
+<span id="stock2">50</span>
+
+</div>
+
+<button class="buy-btn"
+
+onclick="addToCart('Mop Professionale',19.99,'stock2')">
+
+Aggiungi al Carrello
+
+</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1590012314607-cda9d9b699ae?w=800">
+
+<div class="card-content">
+
+<h3>Lavasciuga Pavimenti</h3>
+
+<p>Macchina professionale per grandi superfici.</p>
+
+<div class="price">€899</div>
+
+<div class="stock">
+
+Disponibili:
+<span id="stock3">50</span>
+
+</div>
+
+<button class="buy-btn"
+
+onclick="addToCart('Lavasciuga',899,'stock3')">
+
+Aggiungi al Carrello
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<section id="servizi">
+
+<h2 class="section-title">
+
+I Nostri Servizi
+
+</h2>
 
 <div class="services">
 
 <div class="service">
-<h3>🏠 Pulizia Casa</h3>
+
+<i class="fa-solid fa-house"></i>
+
+<h3>Pulizia Casa</h3>
+
 <p>Pulizia completa di appartamenti e ville.</p>
+
 </div>
 
 <div class="service">
-<h3>🏢 Pulizia Uffici</h3>
-<p>Servizi professionali per aziende.</p>
+
+<i class="fa-solid fa-building"></i>
+
+<h3>Pulizia Uffici</h3>
+
+<p>Servizio professionale per aziende e uffici.</p>
+
 </div>
 
 <div class="service">
-<h3>🛠 Riparazione Macchine</h3>
-<p>Assistenza tecnica specializzata.</p>
+
+<i class="fa-solid fa-soap"></i>
+
+<h3>Pulizia Condomini</h3>
+
+<p>Servizio periodico per condomini.</p>
+
+</div>
+
+<div class="service">
+
+<i class="fa-solid fa-screwdriver-wrench"></i>
+
+<h3>Riparazione Macchine</h3>
+
+<p>Riparazione di macchine per la pulizia professionale.</p>
+
+</div>
+
+<div class="service">
+
+<i class="fa-solid fa-industry"></i>
+
+<h3>Pulizia Industriale</h3>
+
+<p>Capannoni, magazzini e industrie.</p>
+
+</div>
+
+<div class="service">
+
+<i class="fa-solid fa-water"></i>
+
+<h3>Lavaggio Pavimenti</h3>
+
+<p>Lavaggio e lucidatura pavimenti professionale.</p>
+
 </div>
 
 </div>
 
 </section>
 
-<section class="section" id="prenota">
+<section id="prenota">
 
-<h2 class="section-title">Prenota una Pulizia</h2>
+<h2 class="section-title">
+
+Prenota un Servizio
+
+</h2>
 
 <div class="booking">
 
-<input type="text" placeholder="Nome">
+<input type="text" placeholder="Nome Completo">
 
-<input type="text" placeholder="Telefono">
+<input type="tel" placeholder="Telefono">
 
 <input type="text" placeholder="Indirizzo">
 
 <input type="date">
 
-<script>
+<textarea rows="5" placeholder="Note (opzionale)"></textarea>
 
-<button onclick="prenota()">
-Prenota Ora
+<button onclick="prenotaServizio()">
+
+Conferma Prenotazione
+
 </button>
-
-</script>
 
 </div>
 
@@ -387,54 +979,20 @@ Prenota Ora
 
 <h2>Khalil Fedeltà</h2>
 
-<p>Via Giuseppe Garibaldi 41, 20010 Pogliano Milanese MI</p>
+<p>📍 Via Giuseppe Garibaldi, 41, 20010 Pogliano Milanese MI</p>
 
-<p>+39 340 200 90 90</p>
+<p>📞 +39 393 402 0090</p>
 
-<p>kfprodotti@gmail.com</p>
+<p>📧 kfprodotti@gmail.com</p>
 
 </footer>
 
-<a class="whatsapp" href="https://wa.me/393934020090">
-WhatsApp
+<a class="whatsapp"
+
+href="https://wa.me/393934020090"
+
+target="_blank">
+
+<i class="fa-brands fa-whatsapp"></i>
+
 </a>
-<script>
-
-let cart = [];
-
-function addToCart(name, price){
-
-cart.push({
-name:name,
-price:price
-});
-
-document.getElementById("cart-count").innerHTML = cart.length;
-
-}
-
-function checkout(){
-
-if(cart.length==0){
-
-alert("Il carrello è vuoto");
-
-return;
-
-}
-
-alert("Ordine inviato con successo!");
-
-}
-function toggleCart(){
-let cart=document.getElementById("cart-box");
-
-if(cart.style.display=="block"){
-cart.style.display="none";
-}else{
-cart.style.display="block";
-}
-}
-</script>
-</body>
-</html>
