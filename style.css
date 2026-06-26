@@ -576,3 +576,40 @@ transition:.3s;
 transform:scale(1.05);
 
 }
+.cart-item{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:15px;
+
+padding-bottom:15px;
+
+border-bottom:1px solid rgba(255,255,255,.1);
+
+}
+
+.cart-item h4{
+
+margin-bottom:5px;
+
+}
+
+.cart-item button{
+
+background:red;
+
+color:white;
+
+border:none;
+
+padding:10px;
+
+border-radius:8px;
+
+cursor:pointer;
+
+}
