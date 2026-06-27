@@ -89,7 +89,57 @@
 </div>
 
 </div>
+<div class="product-form">
 
+<h2>Aggiungi Prodotto</h2>
+
+<input type="text" id="name" placeholder="Nome Prodotto">
+
+<input type="number" id="price" placeholder="Prezzo (€)">
+
+<input type="number" id="stock" placeholder="Quantità">
+
+<input type="text" id="category" placeholder="Categoria">
+
+<input type="text" id="image" placeholder="Link immagine">
+
+<button onclick="addProduct()">
+
+<i class="fa-solid fa-plus"></i>
+
+Aggiungi Prodotto
+
+</button>
+
+</div>
+
+<h2 style="margin-top:40px;">Lista Prodotti</h2>
+
+<table id="productsTable">
+
+<thead>
+
+<tr>
+
+<th>Nome</th>
+
+<th>Prezzo</th>
+
+<th>Stock</th>
+
+<th>Categoria</th>
+
+<th>Elimina</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+</tbody>
+
+</table>
 <script src="admin.js"></script>
 </body>
 
